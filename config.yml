@@ -24,13 +24,13 @@ params:
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  disableThemeToggle: false 
 
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -58,10 +58,10 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    enabled: true # needs to be explicitly set
+    title: 翔的 Blog 
+    subtitle: "进来看看吧"
+    imageUrl: "https://raw.githubusercontent.com/sammulllx/picgo/main/marktext/%E4%B8%89%E6%AF%9B.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
@@ -70,6 +70,8 @@ params:
         url: posts
       - name: Tags
         url: tags
+      - name: Archive
+        url: "/archives/" 
 
   # home-info mode
   homeInfoParams:
@@ -82,7 +84,7 @@ params:
     - name: stackoverflow
       url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/sammulllx/Hugo-Blog"
 
   analytics:
     google:
@@ -136,3 +138,9 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary

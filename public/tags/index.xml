@@ -10,13 +10,67 @@
       <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 May 2023 10:04:41 +0800</lastBuildDate><atom:link href="https://examplesite.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 May 2023 17:24:41 +0800</lastBuildDate><atom:link href="https://examplesite.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker</title>
+      <link>https://examplesite.com/tags/docker/</link>
+      <pubDate>Wed, 17 May 2023 17:24:41 +0800</pubDate>
+      
+      <guid>https://examplesite.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://examplesite.com/tags/python/</link>
+      <pubDate>Wed, 17 May 2023 17:24:41 +0800</pubDate>
+      
+      <guid>https://examplesite.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://examplesite.com/tags/vue/</link>
+      <pubDate>Wed, 17 May 2023 17:24:41 +0800</pubDate>
+      
+      <guid>https://examplesite.com/tags/vue/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>first</title>
       <link>https://examplesite.com/tags/first/</link>
-      <pubDate>Wed, 17 May 2023 10:04:41 +0800</pubDate>
+      <pubDate>Wed, 17 May 2023 10:36:54 +0800</pubDate>
       
       <guid>https://examplesite.com/tags/first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>https://examplesite.com/tags/mac/</link>
+      <pubDate>Wed, 17 May 2023 10:04:41 +0800</pubDate>
+      
+      <guid>https://examplesite.com/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://examplesite.com/tags/linux/</link>
+      <pubDate>Wed, 17 May 2023 09:46:46 +0800</pubDate>
+      
+      <guid>https://examplesite.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://examplesite.com/tags/c&#43;&#43;/</link>
+      <pubDate>Wed, 17 May 2023 09:19:34 +0800</pubDate>
+      
+      <guid>https://examplesite.com/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
