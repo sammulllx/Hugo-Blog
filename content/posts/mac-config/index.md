@@ -1,9 +1,9 @@
 ---
-title: "Mac初始化"
+title: "Mac-config"
 date: 2023-05-17T10:04:41+08:00
 # weight: 1
-# aliases: ["/first"]
-tags: ["first"]
+# aliases: ["/first","config"]
+tags: ["Mac"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -38,10 +38,6 @@ editPost:
 
 
 # 终端命令
-
-
-
-![截屏2023-05-17 10.01.55.png](/images/assets/39b3442b9d17b568f384d1316c7fbb7a759d7aa2.png)
 
 ## mac下命令
 
