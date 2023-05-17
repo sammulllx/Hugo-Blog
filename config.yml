@@ -58,7 +58,7 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: true # needs to be explicitly set
+    enabled: false # needs to be explicitly set
     title: 翔的 Blog 
     subtitle: "进来看看吧"
     imageUrl: "https://raw.githubusercontent.com/sammulllx/picgo/main/marktext/%E4%B8%89%E6%AF%9B.png"
