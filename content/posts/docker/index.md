@@ -36,7 +36,7 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-![Press and Media Resources - Docker](docker.assets/F8AA5DE0-E78F-49C6-83D3-6DF818961DAC.png)
+
 
 ## 命令
 

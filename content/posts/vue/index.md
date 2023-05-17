@@ -2,8 +2,8 @@
 title: "vue "
 date: 2023-05-17T17:24:41+08:00
 # weight: 1
-# aliases: ["/first","tools"]
-tags: ["docker"]
+# aliases: ["/first","/tools"]
+tags: ["vue"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -48,7 +48,7 @@ npm install
 npm run dev
 ```
 
-![image-20230119200652850](index.assets/image-20230119200652850.png)
+![image-20230119200652850](assets/image-20230119200652850.png)
 
 ```bash
 npm install -g @vue/cli

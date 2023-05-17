@@ -1,9 +1,9 @@
 ---
-title: "My 2st post"
+title: "C++语言基础"
 date: 2023-05-17T09:19:34+08:00
 # weight: 1
 # aliases: ["/first"]
-tags: ["first"]
+tags: ["c++"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -443,7 +443,7 @@ int main() {
    }
    ```
    
-   ​
+   
 
 > 注意：C++风格字符串，需要加入头文件==#include\<string>==
 
@@ -876,7 +876,7 @@ if语句的三种形式
 
 * 多条件的if语句
   
-  ​
+  
 1. 单行格式if语句：`if(条件){ 条件满足执行的语句 }`
    
    ![img](assets/clip_image002.png)
@@ -908,7 +908,7 @@ if语句的三种形式
    }
    ```
    
-   ​
+   
 
 > 注意：if条件表达式后不要加分号
 
@@ -916,7 +916,7 @@ if语句的三种形式
 
 ![img](assets/clip_image002-1541662519170.png)
 
-​
+
 
 示例：
 
@@ -948,11 +948,11 @@ int main() {
 
 ![img](assets/clip_image002-1541662566808.png)
 
-​
 
-​
 
-​
+
+
+
 
 示例：
 
@@ -988,7 +988,7 @@ int main() {
 }
 ```
 
-​
+
 
 **嵌套if语句**：在if语句中，可以嵌套使用if语句，达到更精确的条件判断
 
@@ -2045,7 +2045,7 @@ int main() {
 
 * 可以利用指针变量保存地址
   
-  ​
+  
 
 ### 7.2 指针变量的定义和使用
 

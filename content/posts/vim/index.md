@@ -36,10 +36,7 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-
 # VIM
-
-![](vim-assets/2023-05-17-10-35-48-image.png)
 
 > [vim视频课程](https://www.imooc.com/learn/1129)配合[vim文字教程](https://www.tuyrk.cn/imooc/1129-vim/)进行学习
 > 
@@ -304,30 +301,89 @@ Tab
 > 
 > - 利用正则，将quack替换为jiao，而不替换do_quack  `:% s/\<quack\>/jiao/g`
 
-## Vim 配置
+## vimrc 文件
+
+安装vim 插件管理器[vim-plug](https://github.com/junegunn/vim-plug)
 
 ```shell
-vi ~/.vimrc #编辑 vim 配置文件
+#编辑 vim 配置文件
+vi ~/.vimrc 
 ```
 
 vim 文件设置:
 
-```vim
+```bash
+call plug#begin()
+
+Plug 'w0ng/vim-hybrid'
+Plug 'mhinz/vim-startify'
+Plug 'scrooloose/nerdtree'  "目录树
+Plug 'vim-airline/vim-airline' "状态栏美化
+Plug 'vim-airline/vim-airline-themes'
+Plug 'yggdroot/indentline' "增加代码代码缩进线条   
+Plug 'kien/ctrlp.vim' "快速查找并打开一个文件
+Plug 'easymotion/vim-easymotion' "快速移动到文件中的某个位置
+Plug 'tpope/vim-surround' "快速改单双引号
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim' "模糊搜索一个代码项目中的文本
+Plug 'brooth/far.vim' "批量搜索替换
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } "vim下go 语言
+
+call plug#end()
+
 set number
-syntax on
+set clipboard=unnamed
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set cindent
+
+"设置主题
+set background=dark
+colorscheme hybrid 
 
 let mapleader=','
+"i 代表 insert 模式,<cr>代表回车
 inoremap <leader>w <Esc>:w<cr>
+nnoremap <leader>w :q<cr>
 
-"i 代表 insert 模式,no代表不,re 代表递归 recusion,map 代表映射
-inoremap jj <Esc>
+"进入 normal 模式后光标位置不变 :help `^ 
+inoremap jk <Esc>`^
 
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
+"最前面的 n 代表 normal 模式,C 和 c 都可以
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+noremap <c-k> <c-w>k
 noremap <C-l> <C-w>l
 
-"json 格式化
-"com! 代表命令模式
+noremap  <space> viw
+
+"v 代表 visual 模式,把选中的改为大写
+vnoremap  \ U
+
+"jk 退出visual 模式
+vnoremap jk <Esc>
+
 com! FormatJSON %!python3 -m json.tool
+
+
+"设置NerdTree
+"autocmd vimenter * NERDTree "自动执行
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
+"设置 Ctrlp
+let g:ctrlp_map = '<c-p>'
+
+"设置 easymotion(输入两个字符)
+nmap ss <Plug>(easymotion-s2)
+
 ```
+
+使用`:PlugInstall`安装插件
+
+保存`:w`
+
+生效`:source %`或`:source ~/.vimrc`
+

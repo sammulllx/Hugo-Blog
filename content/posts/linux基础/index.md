@@ -3,7 +3,7 @@ title: "Linux基础"
 date: 2023-05-17T09:46:46+08:00
 # weight: 1
 # aliases: ["/first"]
-tags: ["first"]
+tags: ["linux"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -291,7 +291,7 @@ Host              myubuntu            #自定义别名
 > 
 > 源文件要使用绝对路径,不能使用相对路径,这样可以方便移动链接文件后,仍然能够正常使用
 
-![image-20221227094028383](.linux/image-20221227094028383.png)
+![image-20221227094028383](assets/image-20221227094028383.png)
 
 ### 打包和解压
 

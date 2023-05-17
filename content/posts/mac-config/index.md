@@ -2,7 +2,7 @@
 title: "Mac-config"
 date: 2023-05-17T10:04:41+08:00
 # weight: 1
-# aliases: ["/first","config"]
+# aliases: ["/first","/config"]
 tags: ["Mac"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
@@ -37,9 +37,9 @@ editPost:
 ---
 
 
-# 终端命令
+# Config
 
-## mac下命令
+## mac-config
 
 ### 安装报错
 
@@ -83,8 +83,57 @@ pbpaste > new.txt
 
 ```bash
 brew install tmux
-brew install reattach-to-user-namespace 
 ```
+
+安装插件[tmp](https://github.com/tmux-plugins/tpm)
+
+打开`~/.tmux.conf`
+
+我的.tmux.conf 内容:
+
+```bash
+# Send prefix
+set-option -g prefix C-x
+unbind-key C-x
+bind-key C-x send-prefix
+
+# Use Alt-arrow keys to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Shift arrow to switch windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
+# Mouse mode
+set -g mouse on
+
+# Set easier window split keys
+bind-key v split-window -h
+bind-key h split-window -v
+
+# Easy config reload
+bind-key r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
+```
+
+按前缀+ I（大写i）来下载插件
 
 ### neofetch 展示系统图标
 
@@ -92,57 +141,42 @@ brew install reattach-to-user-namespace
 neofetch
 ```
 
-## ubuntu
+## ubuntu-config
+
+### ssh
 
 ```bash
-# mac中执行
+# mac中执行,实现免密登录
 ssh-keygen -t rsa
 
 ssh-copy-id sammul@192.168.1.135
+```
 
-#apt换清华源
-https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+
+
+###  apt
+
+通过[Ubuntu清华源](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/) 使用国内源
+
+```bash
+#打开配置文件
+vi /etc/apt/sources.list
 
 sudo apt update
 
+#安装常用工具
 sudo apt install neofetch net-tools tmux zsh tree
 
-chsh -s /bin/zsh #将zsh设置成默认shell（不设置的话启动zsh只有直接zsh命令即可）
+chsh -s /bin/zsh #将zsh设置成默认shell,重启终端生效（不设置的话启动zsh只有直接zsh命令即可）
 
-#安装 ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-plugins=( 
-    # other plugins...
-    zsh-autosuggestions zsh-syntax-highlighting
-)
-
-sudo apt install fzf
-apt show fzf
-
-sudo apt install autojump
-vi /usr/share/doc/autojump/README.Debian
-
-#安装 spaceship 主题
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-#Set ZSH_THEME="spaceship" in your .zshrc.
-
-
-
-
-#Tmux Plugin Manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### brew
+
+
+### linuxbrew
 
 ```bash
-#安装 homebrew
+#安装linuxbrew
 //bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
 #安装 nvim
 brew install neovim
@@ -181,7 +215,7 @@ xh \
 zoxide
 ```
 
-### 安装 miniconda
+###  miniconda
 
 ```bash
 #下载安装脚本
@@ -192,10 +226,45 @@ sha256sum Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-### 安装 docker
+###  docker
 
 [Install Docker Engine on Ubuntu | Docker Documentation](https://docs.docker.com/engine/install/ubuntu/)
 
 [Docker 入门教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)
 
 [安装 docker-compose](https://www.runoob.com/docker/docker-compose.html)
+
+### Tmux
+
+```bash
+#Tmux Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+### oh-my-zsh
+
+```bash
+#安装 ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions zsh-syntax-highlighting
+)
+
+sudo apt install fzf
+apt show fzf
+
+sudo apt install autojump
+vi /usr/share/doc/autojump/README.Debian
+
+#安装 spaceship 主题
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+#Set ZSH_THEME="spaceship" in your .zshrc.
+```
+
