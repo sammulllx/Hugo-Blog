@@ -140,6 +140,8 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+[docker 容器中换源](https://blog.csdn.net/u013788943/article/details/109029723)
+
 ## 实操
 
 ### ubuntu
@@ -174,6 +176,8 @@ volumes:
 docker-compose up -d
 #停止
 docker-compose stop 
+#开始
+docker-compose start 
 #删除-v (volume)不加则不会删除 volume 文件夹
 docker-compose down -v
 #查看 所有运行中的 compose
@@ -189,6 +193,25 @@ docker volume ls
 ```bash
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
+
+安装中文版[github 仓库](https://github.com/outlovecn/portainer-cn)
+
+```bash
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data outlovecn/portainer-cn:latest
+```
+
+
+
+升级 portainer:
+
+```bash
+docker stop portainer
+docker rm portainer
+docker pull portainer/portainer-ce:latest
+docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+```
+
+
 
 compose.yaml:
 

@@ -143,6 +143,16 @@ neofetch
 
 ## ubuntu-config
 
+常用命令
+
+```bash
+#在 Ubuntu 系统中，你可以使用以下命令来查看你的 Ubuntu 版本：
+lsb_release -a
+
+```
+
+
+
 ### ssh
 
 ```bash
