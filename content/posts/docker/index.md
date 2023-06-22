@@ -102,7 +102,7 @@ docker container logs [containerID]
 docker container exec -it [containerId] /bin/bash
 
 
-#从正在运行的 docker 容器里面,将文件(文件夹)拷贝到本机当前目录(container 可以省略)
+#从正在运行的 docker 容器里面,将文件(文件夹)拷贝到本机(container 可以省略)
 docker container cp [containerId]:/file/path /host/path
 
 ```
