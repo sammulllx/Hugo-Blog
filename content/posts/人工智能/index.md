@@ -1,9 +1,9 @@
 ---
-title: "C++核心编程"
+title: "情感识别"
 date: 2023-05-18T00:57:49+08:00
 # weight: 1
 # aliases: ["/first"]
-tags: ["c++"]
+tags: ["ai"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
