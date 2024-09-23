@@ -230,15 +230,13 @@ def my_function():
 
 #### 深浅拷贝
 
-![image2024-09-21 21.56.51](assets/image2024-09-21 21.56.51.png)
+![image-20240923202200880](assets/image-20240923202200880.png)
 
 b = a[:]  # 浅拷贝 a 到 b
 
 b=a.copy()  # 浅拷贝 a 到 b
 
 b=copy.copy(a)# 浅拷贝 a 到 b
-
-
 
 b = copy.deepcopy(a)# 深拷贝 a 到 b
 
