@@ -244,3 +244,4 @@ b = copy.deepcopy(a)# 深拷贝 a 到 b
 
 # Pytorch
 
+![image-20240923201545815](assets/image-20240923201545815.png)
